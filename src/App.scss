@@ -1,0 +1,94 @@
+@font-face {
+  font-family: 'pokemon_gbregular';
+  src: url('./font/pokemongb-raeo-webfont.eot');
+  src: url('./font/pokemongb-raeo-webfont.eot?#iefix')
+      format('embedded-opentype'),
+    url('./font/pokemongb-raeo-webfont.woff2') format('woff2'),
+    url('./font/pokemongb-raeo-webfont.woff') format('woff'),
+    url('./font/pokemongb-raeo-webfont.ttf') format('truetype'),
+    url('./font/pokemongb-raeo-webfont.svg#pokemon_gbregular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@mixin absoluteCenter {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+* {
+  font-family: 'pokemon_gbregular';
+}
+
+.App {
+  padding-top: 4rem;
+  height: 100vh;
+  background-size: contain;
+  background-attachment: fixed;
+  background-position: top left;
+  background-color: red;
+}
+
+.navbar {
+  background-color: #ef5350 !important;
+  display: flex;
+  justify-content: space-around;
+}
+
+.sprite {
+  width: 5em;
+  height: 5em;
+}
+
+.card-effect {
+  font-size: 30px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  &:hover {
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+  }
+  -moz-user-select: none;
+  -website-user-select: none;
+  user-select: none;
+  -o-user-select: none;
+}
+
+.styled-link {
+  text-decoration: none;
+  color: black;
+  &:focus,
+  &:hover,
+  &:visited,
+  &:link,
+  &:active {
+    text-decoration: none;
+  }
+}
+
+.loading {
+  @include absoluteCenter();
+  margin: auto;
+}
+
+.single-card {
+  @include absoluteCenter();
+  margin: auto;
+}
+
+.types {
+  font-size: 17px;
+}
+
+.stat-name {
+  font-size: 12px;
+}
+
+small {
+  font-size: 8px;
+}
+
+h6 {
+  font-size: 12px;
+}
